@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Textured Coatings</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777; font-size:1em; margin-left:23px; width:44em; text-align:left; }
+h2{font-size:1.3125em; text-align:center;} td {padding-right:25px;} table {margin-bottom:2em;}
+.caption {padding-top:1.25em; color:#777;}
+table{width:80%; margin:0% 5%;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Textured Coatings</h1>
+<div class="notebookWide">
+<p>These were often manufactured containing up to a few per cent of chrysotile asbestos.</p>
+</div>
+<table width="117" height="26">
+<tbody>
+<tr>
+<td><img width="245" height="184" title="Asbestos textured coating on ceiling" alt="Asbestos textured coating on ceiling" src="../../../media/textured1.jpg" /></td>
+<td><img width="245" height="184" title="Asbestos textured coating on ceiling" alt="Asbestos textured coating on ceiling" src="../../../media/textured2.jpg" /></td>
+</tr>
+<tr>
+<td class="caption" colspan="2">Asbestos textured coating on ceiling</td>
+</tr>
+</tbody>
+</table>
+<div id="countdown"></div>
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+
+  
+
+    
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 0, 38 );
+
+
+});	
+
+}
+// ]]></script></body>
+</html>

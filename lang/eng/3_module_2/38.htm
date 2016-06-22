@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Emergency Procedures</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+
+h2{font-size:1.3125em; font-weight:normal;}
+ol.simple-list {
+	list-style-type: none;
+	list-style-type: decimal !ie; /*IE 7- hack*/
+	
+	margin: 0;
+	margin-left: 3em;
+	padding: 0;
+	
+	counter-reset: li-counter;
+}
+ol.simple-list > li{
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 0.5em;
+	min-height: 3em;
+	border-left: 2px solid #CCCCCC;
+vertical-align: top;
+}
+ol.simple-list > li:before {
+	position: absolute;
+	top: 0;
+	left: -1em;
+	width: 0.8em;
+	
+	font-size: 3em;
+	line-height: 1;
+	font-weight: bold;
+	text-align: right;
+	color: #ccc;
+
+	content: counter(li-counter);
+	counter-increment: li-counter;
+}
+
+.sublist li {  padding: 0.25em;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Emergency Procedures</h1>
+<div class="notebookWide width90">
+<h2>Continued</h2>
+<ol class="simple-list">
+<li value="1">
+<p>&lsquo;Suspected&rsquo; disturbance of ACM&rsquo;</p>
+<p style="padding: 0.25em 2em;">Where doubt exists you must treat all materials as Asbestos, until either the duty holder or your company arrange for sampling and analytical testing.</p>
+</li>
+<li value="2">
+<p>&lsquo;Known or potential&rsquo; exposure to ACM&rsquo;s</p>
+<p style="padding: 0.25em 2em;">If you believe that you may have been exposed and/or contaminated with asbestos material:</p>
+<ol class="sublist" type="a" style="width: 88%;">
+<li>Raise the alarm immediately by getting someone else to report the incident to your supervisor or manager or the person in charge.</li>
+<li>Do not go into occupied areas or buildings until help arrives as you could spread the asbestos contamination.</li>
+<li>Follow instructions which may involve the need to wear respiratory protective equipment and/or protective coveralls, as well as showering in a decontamination unit.</li>
+</ol></li>
+</ol></div>
+<div id="countdown"></div>
+<img width="675" height="390" title="A background image of red and white tape" class="notDisplay" id="bg" alt="A background image of red and white tape" src="../../../media/emergency_bgd.jpg" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat center center');
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+});	
+    }
+// ]]></script></body>
+</html>

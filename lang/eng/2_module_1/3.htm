@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Asbestos Dangers</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777; }
+ul {list-style-type:disc !important; padding:0.5em; list-style-position:inside; margin-top:0.5em;}
+ul li {padding:0.5em; background-image:none; list-style-type:disc; list-style-position:inside;}
+.inline-list {position:absolute; display:block; width:183px; letter-spacing:-0.05px;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Asbestos Dangers</h1>
+<div class="notebookWide width85">
+<p class="width95">Asbestos is only dangerous if you can breathe in, or ingest, the fibres (dust). Solid asbestos containing material is very low risk. It becomes high risk if it is damaged or the surface deteriorates so that fibres are released either by material falling off or people brushing against it.</p>
+<p class="width95">CAR 2012 regulations indicate that almost all workers within the Construction Industry will come across ACM&rsquo;s. These include (although not limited to):</p>
+<ul class="inline-list spcBullets2" style="left: 46px;">
+<li>General maintenance staff</li>
+<li>Electricians</li>
+<li>Plumbers</li>
+<li>Gas fitters</li>
+</ul>
+<ul class="inline-list spcBullets2" style="left: 233px;">
+<li>Painters and decorators</li>
+<li>Joiners</li>
+<li>Plasterers</li>
+</ul>
+<ul class="inline-list spcBullets2" style="left: 408px;">
+<li>Demolition workers</li>
+<li>Roofers</li>
+<li>Shop fitters</li>
+</ul>
+</div>
+<div id="countdown"></div>
+<img width="675" height="390" title="Crocidolite fibres" class="notDisplay" id="bg" alt="Crocidolite fibres" src="../../../media/crocidolite_bgd-panels.jpg" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();     
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  center -25px');
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+});	
+
+}
+// ]]></script></body>
+</html>

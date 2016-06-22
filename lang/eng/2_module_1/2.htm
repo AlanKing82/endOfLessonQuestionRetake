@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Asbestos Types</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+table {
+border-spacing: 0;
+border-collapse: collapse;
+border: 1px solid #eee;
+}
+th {text-align:left; color: #fff; background-image:url('../../../media/subtlenet3.png');  padding: 0.25em 1em; height:14px; text-transform:uppercase;
+        font-variant-caps:all-small-caps;
+        line-height:90%; 
+        font-size:0.98em; font-weight:normal;   }
+td {background:white; color: #4e4f51;}
+th, td {
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    text-align:center;
+}
+.images_in_table td{background-image:none; color:white;}
+    .inline-list {float:left; display: inline-block}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Asbestos Types</h1>
+<div class="notebookWide width70">
+<p>There are 6 types identified in Control of Asbestos Regulations 2012 (CAR 2012). However the three main types of fibrous asbestos are:</p>
+<table>
+<tbody>
+<tr><th>1. Chrysotile (White)</th><th>2. Amosite (Brown)</th><th>3. Crocidolite (Blue)</th></tr>
+<tr class="images_in_table">
+<td><img width="142" height="96" title="Chrysotile fibres" alt="Chrysotile fibres" src="../../../media/chrysotile.jpg" /></td>
+<td><img width="142" height="96" title="Amosite fibres" alt="Amosite fibres" src="../../../media/amosite.jpg" /></td>
+<td><img width="142" height="96" title="Crocidolite fibres" alt="Crocidolite fibres" src="../../../media/crocidolite.jpg" /></td>
+</tr>
+<tr>
+<td>Serpentine group</td>
+<td colspan="2">Amphibole group</td>
+</tr>
+</tbody>
+</table>
+<p class="width90"><br />Further types were identified but were rarely used within the UK but do arise as trace elements. (All are in the Amphibole group).</p>
+<table>
+<tbody>
+<tr><th>4. Actinolite</th><th>5. Anthophyllite</th><th>6. Tremolite</th></tr>
+<tr>
+<td colspan="3">Amphibole group</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="countdown"></div>
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+
+        var frame = parent.$("#myFrame").contents();
+   
+   function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+});	    
+
+}
+// ]]></script></body>
+</html>

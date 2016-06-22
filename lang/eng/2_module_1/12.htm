@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Health Effects</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; padding:0.5em; border-radius:5px; margin-top:0.25em; 
+}
+ul li { padding:0.5em; background-image:none; list-style-type:disc; margin-left:1em;}
+h2{font-size:1.3125em; font-weight:normal;}
+#web_link:link {color:#37637f}
+#web_link:visited {color:#777}
+#web_link:active {color:#ccc !important}
+#web_link:hover {color:#ff0000}
+
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Health Effects</h1>
+<div class="notebookWide width60">
+<ul>
+<li>If you are work with asbestos and you smoke your risk of developing a lung disease is increased by more than 50 times the rate expected in non-smokers with no asbestos exposure.</li>
+<li>Asbestos related diseases cause approximately 4500 deaths each year (this is rising), source: <a id="web_link" href="www.hse.gov.uk/statistics/causdis/asbestos.htm" target="_blank">http://o-las.net/admin/cdt_screens/edit/www.hse.gov.uk/statistics/causdis/asbestos.htm</a></li>
+<li>Single very large exposure can potentially kill, however small repeated exposure is of particular concern also.</li>
+</ul>
+<dl class="noteExpand expandShort">
+<div class="interact_img"></div>
+<dt>Interact</dt><dd>Click on the image&nbsp;for<br />more information.</dd></dl></div>
+<dl class="icons iconsLight"><dt style="left: 432px; top: 0px;"><a id="icon2" href="javascript:void(0);"> <span class="fader"> <img width="243" height="390" title="A cigarette end" alt="A cigarette end" src="../../../media/cigarette_up.jpg" /> <img class="ImgHover" src="../../../media/cigarette_hover.jpg" /> <img width="243" height="390" class="ImgDown" src="../../../media/cigarette_down.jpg" /> </span> </a></dt><dd class="rounded">
+<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
+<img width="600" height="346" title="A graph showing a drastic increase (50 to 90 times higher risk) for people exposed to both asbestos and smoking compared to: 10 times higher risk for smokers not exposed to asbestos and 5 times higher risk for non-smokers exposed to asbestos" alt="A graph showing a drastic increase (50 to 90 times higher risk) for people exposed to both asbestos and smoking compared to: 10 times higher risk for smokers not exposed to asbestos and 5 times higher risk for non-smokers exposed to asbestos" src="../../../media/cancer-risk.png" /></dd></dl>
+<div id="countdown"></div>
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+ parent.disable(); 
+      parent.$('.icons a', frame).icons({'itemsToEnable':'10'});
+     parent.$(".hotspotsMinor a", frame).hotspotMinor();
+
+		parent.$(".iconsLight dt", frame).css(
+								{'width' : '243px',
+								'height' : '390px',
+								'position' : 'absolute'
+
+								});
+								
+
+		parent.$(".icons dd", frame).css(
+								{'top' : '0px',
+								'left' : '0px'
+								});
+
+parent.$('#web_link',frame).attr( 'href', "http://www.hse.gov.uk/statistics/causdis/asbestos.htm" );   
+
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 23 );
+
+
+});	
+}
+// ]]></script></body>
+</html>

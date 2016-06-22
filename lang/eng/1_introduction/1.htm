@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Welcome</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; margin-top:0.5em; margin-bottom:0.25em;}
+ul li {background-image:none; list-style-type:disc; list-style-position:inside;}
+a:link {color:#37637f}
+a:visited {color:#777}
+a:active {color:#ccc !important}
+a:hover {color:#ff0000}
+h2 {padding:0px; margin:3px 0px 7px 0px;}
+p {margin-bottom:0.75em;}
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="width75 blueFadeShort">Welcome</h1>
+<div class="notebookWide width55">
+<p>Welcome to the UKATA Approved Asbestos Awareness course.</p>
+<h2>Contact Information:</h2>
+<ul class="spcBullets2">
+<li>4See Ltd. website: <a href="http://www.4see.co.uk/" target="_blank">http://www.4see.co.uk/</a></li>
+<li>4See Ltd. Telephone number: 01327 811840</li>
+<li>4See Ltd. E-mail: <a href="mailto:training@4SeeGroup.com" target="_top">training@4SeeGroup.com</a></li>
+</ul>
+<h2>Course Tips</h2>
+<p>To increase the screen size please use your tools function.</p>
+<p class="width90">During the training you will be able to click onto various websites for more information, you may want to save these links for future reference.</p>
+<p class="width95">The course pages will display a timer counting down how long is left until you can move forward to the next slide. This gives you time to review the content fully before moving through the course.</p>
+<p class="width85">Please select the forward button to continue when the timer is finished.</p>
+</div>
+<div id="countdown"></div>
+<img width="675" height="390" title="UKATA logo over a scaffolding image in the background" class="notDisplay" id="wideImgToBg" alt="UKATA logo over a scaffolding image in the background" src="../../../media/welcome.png" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#wideImgToBg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  top right');
+  
+
+   function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+}); 
+
+	
+
+}
+// ]]></script></body>
+</html>

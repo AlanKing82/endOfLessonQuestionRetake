@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Risk Levels</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; padding:0.5em; border-radius:5px; margin-top:0.25em;}
+ul li {padding:0.5em; background-image:none; list-style-type:disc; margin-left:1em;}
+h2 {font-size:1.3125em; font-weight:normal;}
+
+th, td {color:white; }
+    table {margin:0 35px 0 17px; font-size:1.1em; }
+    td, th {padding:0.65em;}
+    .red {background:#ff0000; width:33%; font-weight:bold;}
+    .yellow {background:#ffc000; width:33%; font-weight:bold; color:#474747;}
+    .green {background:#6bb41d; width:33%; font-weight:bold;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Risk Levels</h1>
+<div class="notebookWide width60"><dl class="noteExpand expandShort">
+<div class="interact_img"></div>
+<dt>Interact</dt><dd>Click on the image&nbsp;for<br />more information.</dd></dl></div>
+<dl class="icons iconsLight"><dt style="left: 314px; top: 0px;"><a id="icon2" href="javascript:void(0);"> <span class="fader"> <img width="361" height="390" title="A magnifying glass showing asbestos fibres in close-up; a scaffolding in the background" alt="A magnifying glass showing asbestos fibres in close-up; a scaffolding in the background" src="../../../media/risk_level_up.jpg" /> <img width="361" height="390" class="ImgHover" src="../../../media/risk_level_hover.jpg" /> <img width="361" height="390" class="ImgDown" src="../../../media/risk_level_down.jpg" /> </span> </a></dt><dd class="rounded" style="width: 575px;">
+<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
+<table>
+<thead>
+<tr><th class="red">High Risk</th><th class="yellow">Medium Risk</th><th class="green">Low Risk</th></tr>
+</thead>
+<tbody>
+<tr>
+<td class="red">Loose fill Limpet sprayed coating</td>
+<td class="yellow">Cements (including roof sheets and flues)</td>
+<td class="green">Thermoplastic floor tiles mastics, sealants, putties etc.</td>
+</tr>
+<tr>
+<td class="red">Thermal insulation-lagging to pipes, boilers and calorifiers</td>
+<td class="yellow">Fire blankets and curtains</td>
+<td class="green">Bitumen roofing felts</td>
+</tr>
+<tr>
+<td class="red">Insulation boards</td>
+<td class="yellow">Paper production</td>
+<td class="green">Textured coatings (artex) &amp; paints</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+<div id="countdown"></div>
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+ parent.disable(); 
+        parent.$('.icons a', frame).icons({'itemsToEnable':'12'});
+        parent.$(".hotspotsMinor a", frame).hotspotMinor();
+     
+		parent.$(".iconsLight dt", frame).css(
+								{'width' : '361px',
+								'height' : '390px',
+								'position' : 'absolute'
+								});
+		parent.$(".icons dd", frame).css(
+								{'top' : '125px',
+								'left' : '10px'
+								});
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 23 );
+
+
+});	
+
+    }
+// ]]></script></body>
+</html>

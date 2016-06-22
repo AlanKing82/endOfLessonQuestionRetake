@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Legal Framework</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; padding-top:0.5em; border-radius:5px; margin-top:1em;}
+h2{font-size:1.3125em; font-weight:normal;}
+ul li {padding:0.5em 0em; background-image:none; list-style-type:disc;  }
+a:link {color:#37637f}
+a:visited {color:#777}
+a:active {color:#ccc !important}
+a:hover {color:#ff0000}
+.pdf_link {background-image:url('../../../media/icon_acrobat.png'); background-repeat:no-repeat; background-position:left center; padding:5px 5px 5px 24px; height:18px;} 
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Legal Framework</h1>
+<div class="notebookWide width75">
+<p>If you suspect asbestos to be present where you are working, either in material in place <br />or as fallen debris around you then:</p>
+<ul>
+<li>Stop work immediately.</li>
+<li>Inform those around you.</li>
+<li>Everyone should leave the area and the area secured to prevent<br /> others from entering the area where asbestos is suspected.</li>
+<li>Contact your line manager and await their further instructions.</li>
+</ul>
+<p>Please use the link below to download a free copy of Equipment Method Sheet 1 (EM1):</p>
+<a class="pdf_link" href="http://www.hse.gov.uk/pubns/guidance/em1.pdf" target="_blank">What to do if you uncover or damage materials that may contain asbestos</a></div>
+<div id="countdown"></div>
+<img width="675" height="390" title="Red and white tape" class="notDisplay" id="bg" alt="Red and white tape" src="../../../media/emergency.jpg" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat center center');
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 23 );
+
+
+});	
+    }
+// ]]></script></body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Asbestos registers continued</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+h2 {font-size:1.3125em; font-weight:normal;}
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; padding:0.5em;  margin-top:1em;}
+ul li {padding:0.5em; background-image:none; list-style-type:disc;}
+.inline-list {float:left; display: inline-block}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Legal Framework</h1>
+<div class="notebookWide width65">
+<h2>Asbestos registers &mdash; continued</h2>
+<p>To do this you should make:</p>
+<ul>
+<li>Regular inspections to check the current condition of asbestos materials</li>
+<li>Deletions to the register when any asbestos is removed</li>
+<li>Additions to the register when new areas are surveyed <br />and asbestos is located</li>
+<li>Changes to the register (at any time asbestos-containing <br />materials are found to have deteriorated)</li>
+</ul>
+</div>
+<div id="countdown"></div>
+<img width="675" height="390" title="Cross section of a house. There is a magnifying glass showing a section of a wall, a door, gutters and downpipes and external services highlighted" class="notDisplay" id="bg" alt="Cross section of a house. There is a magnifying glass showing a section of a wall, a door, gutters and downpipes and external services highlighted" src="../../../media/magnifying_glass_over.jpg" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  center 90%');
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+});	
+    }
+// ]]></script></body>
+</html>

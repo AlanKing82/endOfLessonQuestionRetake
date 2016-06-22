@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Author" content="O-LAS v2 (Content Development Tool)" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>UKATA Category A Asbestos Awareness</title>
+	<link rel="stylesheet" href="../../SCOFunctions/player.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+	<script type="text/javascript" src="../../SCOFunctions/player.js?v=201605261538_14ffa496032981fe9a9535db039d4b1b"></script>
+	<script type="text/javascript" src="../../SCOFunctions/api.min.js?v=201605261538_14ffa496032981fe9a9535db039d4b1b"></script>
+	<script type="text/javascript" src="../../SCOFunctions/jquery.min.js"></script>
+</head>
+<body id="playerBody">
+<script type="text/javascript">
+//<![CDATA[
+var assessmentLabel = 'Risk Assessment';
+var surveyLabel = 'Survey';
+$(document).ready(function(){
+	
+    // make lesson frame transparent via javascript as W3C validator doesn't allow 'allowTransparency' atribute within iframe tag?!
+	$('#lessonFrame').attr( 'allowTransparency', 'true' );
+    
+    shrinkLessonTitles();
+    
+    prerequisitesMode = false;
+    prerequisitesLinkedAssessmentMessageiPlayer = 'Please finish all lessons first before taking the %linked%!';
+    
+	// keeps the time when session started
+	// we cannot rely on startDate in function.js as it is reset every time when new lesson is loaded
+	playerSessionTimer = null; 
+	
+	// limits test lesson attempts
+	maxTestAttempts = 2;
+	maxAttemptsWarning = 'You have reached your last attempt (%currentAttempt% of %maxAttempt%).\n\nWould you like to take the test now?';
+
+    // Set parent.interactionCount from previously completed interactions count
+    if( getOlasConfigValue('scormInteractions') == 1 )
+        interactionCount = doLMSGetValue("cmi.interactions._count"); // For SCORM journalling
+
+	// parse lesson location
+	initLocalTracker( 5 ); 
+
+	// to prevent caching keep version id as last modification time
+	GOOGLE_TRANSLATE_VERSION = '201409031417';
+	// value, which tells to use GT
+	LANG_USE_GT = '#use-GT#';
+	// use google translate?
+    useGoogleTranslate = ( location.search.indexOf( "gt=1" ) != -1 );
+    if( useGoogleTranslate )
+        loadGoogleTranslate( window );
+	
+	// go to next lesson
+	document.getElementById('lesson'+getStartLesson()).onclick();
+
+    if ( getOlasConfigValue('linkedType') == 'SV' ) {
+        $('#lesson-la').attr('title', surveyLabel);
+    }
+});
+
+//]]>
+</script>
+<!--Black outlined background-->
+<!--Page container-->
+<div id="container">
+	<!--Top course menu div-->
+	<div id="courseMenu" >
+		<div id="course_menu">				
+			<br />
+			<a href="#"  id="lesson1" class="menuItem" onclick="return openLesson( 1, '1_introduction.htm' );" title="Introduction"><span>Introduction</span></a><a href="#"  id="lesson2" class="menuItem" onclick="return openLesson( 2, '2_module_1.htm' );" title="Module 1"><span>Module 1</span></a><a href="#"  id="lesson3" class="menuItem" onclick="return openLesson( 3, '3_module_2.htm' );" title="Module 2"><span>Module 2</span></a><a href="#"  id="lesson4" class="menuItem" onclick="return openLesson( 4, '4_module_3.htm' );" title="Module 3"><span>Module 3</span></a><a href="#"  id="lesson5" class="menuItem test" onclick="return openLesson( 5, 'test.htm', true );" title="Test"><span>Test</span></a>			
+			<!-- Linked assessment row -->
+			<a id="lesson-la" class='menuItem blank laInactive disabled' href='#' onclick="openLinkedAssessment()" title="Risk Assessment"></a>
+
+		</div>		
+	</div><!--End of top course menu div-->
+	<!--Course contents-->
+  	<div id="courseContent" style="float: right; height: 520px; width: 750px;">
+		<iframe frameborder="0" align="middle" style="width: 750px; height: 520px;" id="lessonFrame" class="scoframe" name="lessonFrame" src=""></iframe>
+	</div><!--End of course contents div-->  
+</div><!--End of page container div-->
+<!-- Tools kit for developers -->
+<div id="developerToolbox" style="display:none;position:absolute;top:0;left:0;padding:5px;"></div>
+</body>
+</html>

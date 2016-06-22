@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Types of RPE</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.textWide {color:#666; font-size:1em; margin-left:17px; }
+.largetabs {width:525px; padding:0px; position:absolute; margin-left:35px; margin-top:-10px;}
+.largetabs dt a{text-align:left;   
+        text-transform:uppercase;
+        font-variant-caps:all-small-caps;
+        line-height:92%; 
+        font-size:0.97em;  
+        display:inline-block; padding: 6px 10px; height:14px; text-decoration:none; float:right; margin-right:3px; z-index:1;  letter-spacing:-0.05px;
+-webkit-box-shadow: -1px 3px 2px 0px rgba(50, 50, 50, 0.1);
+-moz-box-shadow:    -1px 3px 2px 0px rgba(50, 50, 50, 0.1);
+box-shadow:         -1px 3px 2px 0px rgba(50, 50, 50, 0.1);      
+}
+dt a span {margin-top:3px; display:block}     
+a.not-active{
+   background:#eee; 
+   color:#a4a4a4;
+}
+a.not-active:active, a.not-active:visited {color:#a4a4a4;
+}  
+a.active:active, a.active:visited {color:#fff;} 
+a.active{
+   color:#fff;
+   background:url('../../../media/subtlenet3.png'); 
+}  
+.largetabs dd {
+    background-image: none;
+    left: -40px;
+    position:absolute;
+    top:25px;
+    width: 525px;
+        height:250px;
+        border-top:2px solid #37637f;
+        background-color:#fff;
+        z-index:10;      
+}
+.largetabs dd img{float:left; margin:10px;}
+th {text-align:left; text-transform:uppercase; color: #666; background-color:#fff; text-transform:uppercase;
+        font-variant-caps:all-small-caps;
+        font-size:0.98em;  
+        font-weight:normal;
+    }
+th:first-child {width:3em;}   
+td:first-child {text-align:center;}
+dd td { color: #4e4f51;}
+th, td {    
+    border: 1px solid #eee;
+    padding: 5px 8px;
+    border-collapse: collapse;
+  }
+table {
+  border-collapse: collapse;
+  border-spacing: 0;    
+}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Types of RPE</h1>
+<div class="textWide">
+<p>Click the tabs below for more information.</p>
+<div id="tabs-wrapper"><dl class="tabs largetabs"><dt><a class="active" id="tabs1" href="javascript:void(0);"><span>Breathing apparatus</span></a></dt><dd style="display: block;"><img width="515" height="249" title="Examples of breathing apparatus" alt="Examples of breathing apparatus" src="../../../media/RPE1.jpg" z-index="3" /></dd><dt><a class="not-active" id="tabs2" href="javascript:void(0);"><span>Respirators</span></a></dt><dd><img width="515" height="249" title="Examples of respirators" alt="Examples of respirators" src="../../../media/RPE2.jpg" z-index="3" /></dd></dl></div>
+</div>
+<div id="countdown"></div>
+<script type="text/javascript">// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        parent.$('.tabs a', frame).tabs({ 'itemsToEnable': '12'});
+    
+        
+        parent.$('#tabs1, #tabs2', frame).each(function() {
+        parent.$(this).click(
+                function () {
+                    parent.$('#tabs1, #tabs2', frame).removeClass('active').addClass('not-active');
+                    parent.$(this).addClass('active');
+                    });
+                });
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 23 );
+
+
+});	
+  
+                }
+// ]]></script></body>
+</html>

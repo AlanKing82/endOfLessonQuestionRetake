@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Legal Framework — Asbestos register example</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.textWide, dd {color:#666; font-size:1em; margin-left:23px;  }
+ul {list-style-type:disc !important; padding-top:0.5em;  list-style-position:inside; border-radius:5px; margin-top:1em;
+}
+h2{font-size:1.3125em; font-weight:normal;}
+ul li { padding:0.5em 0em; background-image:none; list-style-type:disc; list-style-position:inside; }
+.iconsLight {z-index:-10;}
+.iconsLight dd {z-index:-10;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Legal Framework &mdash; Asbestos register example</h1>
+<div><dl class="noteExpand expandShort">
+<div class="interact_img"></div>
+<dt>Interact</dt><dd>Click on the table&nbsp;for<br />more information.</dd></dl><dl class="icons iconsLight"><dt style="left: 70px; top: 282px; width: 316px;"><a id="icon2" href="javascript:void(0);"> <span class="fader"> <img width="316" height="64" title="HSE Asbestos Register example - section concerning the location, type, quantity, surface coating and condition of a product" alt="HSE Asbestos Register example - section concerning the location, type, quantity, surface coating and condition of a product" src="../../../media/L02S20_01_up.png" /> <img width="316" height="64" class="ImgHover" src="../../../media/L02S20_01_hover.png" /> <img width="316" height="64" class="ImgDown" src="../../../media/L02S20_01_up.png" /> </span></a></dt><dd style="top: 96px; left: 0px;">
+<p style="width: 100px; position: absolute; left: 10px; top: 100px; text-align: center; line-height: 1.1em;">Where in the building are we looking at (and the area)?</p>
+<p style="width: 100px; position: absolute; left: 115px; top: 110px; text-align: center;">What type of product is it?</p>
+<p style="width: 100px; position: absolute; left: 220px; top: 110px; text-align: center;">How much of it <br />is there?</p>
+<p style="width: 100px; position: absolute; left: 275px; top: 15px; text-align: center;">What is the material coating the product?</p>
+<p style="width: 100px; position: absolute; left: 330px; top: 110px; text-align: center;">What condition is the material in?</p>
+<img width="619" height="186" style="z-index: -10;" src="../../../media/L02S20_feedback01.png" /></dd><dt style="left: 386px; top: 282px; width: 186px;"><a id="icon3" href="javascript:void(0);"> <span class="fader"> <img width="186" height="64" title="HSE Asbestos Register example - section concerning accessibility, type of asebestos and additional comments" alt="HSE Asbestos Register example - section concerning accessibility, type of asebestos and additional comments" src="../../../media/L02S20_02_up.png" /> <img class="ImgHover" src="../../../media/L02S20_02_hover.png" /> <img class="ImgDown" src="../../../media/L02S20_02_up.png" /> </span></a></dt><dd style="top: 96px; left: 0px;">
+<p style="width: 90px; position: absolute; left: 336px; top: 100px; text-align: center;">How easy is it for the product to be reached?</p>
+<p style="width: 115px; line-height: 1.1em; position: absolute; left: 412px; top: 15px; text-align: center;">If no sample is taken then presumption<br /> of asbestos is expected</p>
+<p style="width: 90px; position: absolute; left: 512px; top: 100px; text-align: center;">Comments regarding sampling</p>
+<img width="619" height="186" style="z-index: -10;" src="../../../media/L02S20_feedback02.png" /></dd></dl></div>
+<div id="countdown"></div>
+<script type="text/javascript">// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+
+        var frame = parent.$("#myFrame").contents();
+        parent.$('.icons a', frame).icons({'itemsToEnable':'10'});
+        parent.$(".hotspotsMinor a", frame).hotspotMinor();
+
+		parent.$(".iconsLight dt", frame).css(
+			{
+				'height' : '64px',
+				'position' : 'absolute'
+								});
+		parent.$(".icons dd", frame).css(
+				{'position' : 'absolute',
+                                 'width' : '619px',
+                                 'height' : '186px'
+					            });
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 23 );
+
+
+});	
+
+}
+// ]]></script></body>
+</html>

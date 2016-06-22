@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Regulation 6: Assessment of work which exposes employees</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+h2{font-size:1.3125em; font-weight:normal;}
+
+ol.simple-list {
+	list-style-type: none;
+	list-style-type: decimal !ie; /*IE 7- hack*/
+	
+	margin: 0;
+	margin-left: 3em;
+	padding: 0;
+	
+	counter-reset: li-counter;
+}
+ol.simple-list > li{
+	position: relative;
+	margin-bottom: 20px;
+	padding-left: 0.5em;
+	min-height: 3em;
+	border-left: 2px solid #CCCCCC;
+vertical-align:top;
+}
+ol.simple-list > li:before {
+	position: absolute;
+	top: 0;
+	left: -1em;
+	width: 0.8em;
+	
+	font-size: 3em;
+	line-height: 1;
+	font-weight: bold;
+	text-align: right;
+	color: #ccc;
+
+	content: counter(li-counter);
+	counter-increment: li-counter;
+}
+
+.sublist li {  padding: 0.75em 1em;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Regulation 6: Assessment of work which exposes employees</h1>
+<div class="notebookWide width75">
+<h2>Continued</h2>
+<ol class="simple-list">
+<li value="1">An employer must not carry out work which is liable to expose employees of that employer to asbestos unless that employer has:<ol class="sublist" type="a">
+<li>Made a suitable and sufficient assessment of the risk created by that exposure to the health of those employees and of the steps that need to be taken to meet the requirements of these Regulations.</li>
+<li>Recorded the significant findings of that risk assessment as soon as is practicable after the risk assessment is made, and</li>
+<li>Implemented the steps referred to in sub-paragraph (a).</li>
+</ol></li>
+</ol></div>
+<div id="countdown"></div>
+<img width="675" height="390" title="A background image of a scaffolding" class="notDisplay" id="bg" alt="A background image of a scaffolding" src="../../../media/scaffolding2.jpg" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  center 90%');
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+});	
+    }
+// ]]></script></body>
+</html>

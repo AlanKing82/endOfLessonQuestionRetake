@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Learning Contents</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important;  padding:0.5em; list-style-position:inside; border-radius:5px; margin-top:0.5em;}
+ul li { padding:0.5em; background-image:none; list-style-type:disc; list-style-position:inside; }
+.inline-list {position:absolute; display:block; width:180px;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Learning Contents</h1>
+<div class="notebookWide width90">
+<p>This course will cover a wide range of topics in accordance with regulation 10 <br />paragraph 127 a,b,c and d of the Control of Asbestos Regulations (CAR) 2012.</p>
+<ul class="inline-list spcBullets2" style="left: 50px;">
+<li>Asbestos dangers</li>
+<li>Types of asbestos</li>
+<li>Health effects</li>
+<li>Why was it banned?</li>
+<li>Entry routes into the body</li>
+<li>Diseases overview</li>
+</ul>
+<ul class="inline-list spcBullets2" style="left: 225px;">
+<li>Legal framework</li>
+<li>Emergency procedures</li>
+</ul>
+<ul class="inline-list spcBullets2" style="left: 400px;">
+<li>Asbestos properties</li>
+<li>Asbestos materials/uses</li>
+<li>Risk of fibre release</li>
+<li>RPE/PPE</li>
+</ul>
+</div>
+<div id="countdown"></div>
+<img width="675" height="390" title="Silhouettes of construction workers on a building site" class="notDisplay" id="bg" alt="Silhouettes of construction workers on a building site" src="../../../media/building-site-panels.jpg" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat center -25px');
+
+
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 0, 61 );
+
+
+});	
+
+
+
+
+
+
+
+
+    }
+// ]]></script></body>
+</html>

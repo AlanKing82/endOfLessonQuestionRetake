@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Legal Framework</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+h2{font-size:1.3125em; font-weight:normal;}
+.textWide {color:#666; font-size:1em; margin-left:23px; width:47em;}
+ul {list-style-type:disc !important;   }
+ul li {padding:0em 0em 0.75em 0em; background-image:none; list-style-type:disc; margin-left:1.25em; list-style-position:outside;}
+ul li ul {background-image:none; padding: 0em; margin-top:0.5em; margin-bottom:0px;}
+ul li ul li {list-style-type:circle;  margin-left:1.33em;}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Legal Framework</h1>
+<div class="textWide">
+<h2 style="margin-top: 105px;">Asbestos register example &mdash; <b>Material assessment score</b></h2>
+<ul>
+<li>Priority must be determined by carrying out a risk assessment (i.e. a priority assessment), which will take into account factors such as:
+<ul>
+<li>The location of the material</li>
+<li>The extent of the material</li>
+<li>The use to which the location is put</li>
+<li>The occupancy of the area</li>
+<li>The activities carried on in the area</li>
+<li>The likelihood/frequency with which maintenance activities are likely to take place</li>
+</ul>
+</li>
+</ul>
+<div id="countdown"></div>
+<img width="675" height="390" title="HSE Asbestos Register example with " class="notDisplay" id="bg" alt="HSE Asbestos Register example with " src="../../../media/material_score.png" />
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat right bottom');
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+});	
+    }
+// ]]></script>
+</div></body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Legal Framework</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; padding:0.5em; margin-top:0.25em; 
+}
+ul li { padding:0.5em; background-image:none; list-style-type:disc;}
+h2{font-size:1.3125em; font-weight:normal;}
+.weblink:link {color:#37637f}
+.weblink:visited {color:#777}
+.weblink:active {color:#ccc !important}
+.weblink:hover {color:#ff0000}
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Legal Framework</h1>
+<div class="notebookWide width60 ">
+<h2>Desktop study/GAP Analysis:</h2>
+<ul>
+<li>A desktop study provides you with your first step to putting your business on track for full compliance with current legislation regarding asbestos &ndash; the Control of Asbestos Regulations 2012.</li>
+<li>Taking the form of a gap analysis, the desktop study examines what you have done to date and identifies any shortfalls.</li>
+<li>A simple schedule is then created to help you plan your activities and show your route to compliance with the current and planned asbestos legislation.</li>
+</ul>
+<dl class="noteExpand expandShort">
+<div class="interact_img"></div>
+<dt>Interact</dt><dd>Click on the image&nbsp;for<br />more information.</dd></dl></div>
+<dl class="icons iconsLight"><dt style="left: 432px; top: 0px;"><a id="icon2" href="javascript:void(0);"> <span class="fader"> <img width="243" height="390" title="Folders" alt="Folders" src="../../../media/folders_up.jpg" /> <img class="ImgHover" src="../../../media/folders_hover.jpg" /> <img class="ImgDown" src="../../../media/folders_down.jpg" /> </span> </a></dt><dd class="rounded" style="width: 410px; color: #333333;">
+<div title="Close" class="hotspotMinorCloseWindow">close<span></span></div>
+<p style="margin-top: 1.25em;">The study will:</p>
+<ul>
+<li>Review all current asbestos information held by your company.</li>
+<li>Clarify which procedures you already have in place for the management of asbestos.</li>
+<li>Identify the steps you need to take to achieve full compliance with current asbestos legislation.</li>
+<li>Provide a route map to compliance with easy to follow directions.</li>
+<li>Advise you of the procedures or adaptations you must make to ensure that you can show you have taken all reasonably practicable steps to manage your company&rsquo;s risk from asbestos.</li>
+</ul>
+</dd></dl>
+<div id="countdown"></div>
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+ parent.disable(); 
+      parent.$('.icons a', frame).icons({'itemsToEnable':'10'});
+     parent.$(".hotspotsMinor a", frame).hotspotMinor();
+       
+		parent.$(".iconsLight dt", frame).css(
+								{'width' : '243px',
+								'height' : '390px',
+								'position' : 'absolute'
+								});
+		parent.$(".icons dd", frame).css(
+								{'top' : '55px',
+								'left' : '15px'
+								});
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 23 );
+
+
+});	
+    }
+// ]]></script></body>
+</html>

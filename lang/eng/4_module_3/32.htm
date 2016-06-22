@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Author" content="EssentialSkillz TM" />
+<meta http-equiv="Description" content="Online training course" />
+<meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Coveralls</title>
+<link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
+<style><!--
+.notebookWide {color:#777;}
+ul {list-style-type:disc !important; padding:0.5em; border-radius:5px; margin-top:1em;
+}
+ul li { padding:0.5em; background-image:none; list-style-type:disc;}
+.inline-list {float:left; display: inline-block}
+
+
+#countdown{
+    color:#777;
+    font-family: Verdana, Arial, sans-serif;
+	font-style: italic;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    position:absolute;
+    top:360px;
+    left:20px;
+}
+--></style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">
+<h1 class="blueFadeShort">Coveralls</h1>
+<div class="notebookWide">
+<ul>
+<li>CE Type 5: Prevent penetration of fibres</li>
+<li>Comfortable, sufficient size and no dust traps</li>
+<li>Be suitable for cold environments</li>
+<li>You may need waterproof overalls for outdoor workfeatures</li>
+<li>Elasticised cuffs and ankles</li>
+<li>Dispose of used overalls as asbestos waste</li>
+<li>Wear the overall legs over footwear</li>
+<li>Tucking them in lets dust into footwear</li>
+<li>Wear the hood over the RPE straps</li>
+</ul>
+</div>
+<img width="675" height="390" title="Example of coveralls - all required features highlighted: resealable flap and two-way zip, enclosed neck area, knitted cuffs, elastic waist" class="notDisplay" id="bg" alt="Example of coveralls - all required features highlighted: resealable flap and two-way zip, enclosed neck area, knitted cuffs, elastic waist" src="../../../media/coveralls.jpg" />
+<div id="countdown"></div>
+<script>// <![CDATA[
+var activity = 1;          
+   
+    if (parent.$) {
+       parent.$(function() {
+       parent.disable();
+        var frame = parent.$("#myFrame").contents();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  center 90%');
+   parent.disable(); 
+
+function countdown( elementName, minutes, seconds )
+{
+    var element, endTime, hours, mins, msLeft, time;
+
+    function twoDigits( n )
+    {
+        return (n <= 9 ? "0" + n : n);
+    }
+
+    function updateTimer()
+    {
+        msLeft = endTime - (+new Date);
+        if ( msLeft < 1000 ) {
+            element.innerHTML = "Please click forward ";
+            parent.enable(true); 
+        } else {
+            time = new Date( msLeft );
+            hours = time.getUTCHours();
+            mins = time.getUTCMinutes();
+            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
+            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
+        }
+    }
+
+    element = document.getElementById( elementName );
+    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
+    updateTimer();
+}
+
+countdown( "countdown", 1, 01 );
+
+
+});	
+ 
+    }
+// ]]></script></body>
+</html>
