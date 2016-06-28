@@ -5,95 +5,59 @@
 <meta http-equiv="Description" content="Online training course" />
 <meta name="Keywords" content="content development tool, health and safety training, risk assessment, online learning" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<title>Welcome</title>
+<title>Question 2</title>
 <link rel="stylesheet" href="../../../SCOFunctions/cdt.css?v=201605261538_14ffa496032981fe9a9535db039d4b1b" type="text/css" media="screen" />
-<style><!--
+<style>
 .notebookWide {color:#777;}
-ul {list-style-type:disc !important; margin-top:0.5em; margin-bottom:0.25em;}
-ul li {background-image:none; list-style-type:disc; list-style-position:inside;}
-a:link {color:#37637f}
-a:visited {color:#777}
-a:active {color:#ccc !important}
-a:hover {color:#ff0000}
-h2 {padding:0px; margin:3px 0px 7px 0px;}
-p {margin-bottom:0.75em;}
-#countdown{
-    color:#777;
-    font-family: Verdana, Arial, sans-serif;
-	font-style: italic;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    position:absolute;
-    top:360px;
-    left:20px;
-}
---></style></head>
-<body id="screenBody" onload="parent.onFrameLoad();">
-<h1 class="width75 blueFadeShort">Welcome</h1>
-<div class="notebookWide width55">
-<p>Welcome to the UKATA Approved Asbestos Awareness course.</p>
-<h2>Contact Information:</h2>
-<ul class="spcBullets2">
-<li>4See Ltd. website: <a href="http://www.4see.co.uk/" target="_blank">http://www.4see.co.uk/</a></li>
-<li>4See Ltd. Telephone number: 01327 811840</li>
-<li>4See Ltd. E-mail: <a href="mailto:training@4SeeGroup.com" target="_top">training@4SeeGroup.com</a></li>
-</ul>
-<h2>Course Tips</h2>
-<p>To increase the screen size please use your tools function.</p>
-<p class="width90">During the training you will be able to click onto various websites for more information, you may want to save these links for future reference.</p>
-<p class="width95">The course pages will display a timer counting down how long is left until you can move forward to the next slide. This gives you time to review the content fully before moving through the course.</p>
-<p class="width85">Please select the forward button to continue when the timer is finished.</p>
-</div>
-<div id="countdown"></div>
-<img width="675" height="390" title="UKATA logo over a scaffolding image in the background" class="notDisplay" id="wideImgToBg" alt="UKATA logo over a scaffolding image in the background" src="../../../media/welcome.png" />
-<script>// <![CDATA[
-var activity = 1;          
-   
-    if (parent.$) {
-       parent.$(function() {
-       parent.disable();
-        var frame = parent.$("#myFrame").contents();
-        var background = parent.$('#wideImgToBg',frame).attr('src');
-        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  top right');
+h2 {font-size:1.3125em; font-weight:normal;}
+.questionBox{background:url('../../../media/subtlenet2.png'); margin-top:1em;}
+table {padding:0 0 0 10px; list-style-position:inside; margin-top:1.25em; background-color:#fff;}
+table {margin: 0px 0px 0px 1.25em; width:450px}    
+.questionBox tr {height:30px;}
+.answer {padding:0px !important; margin:0px !important; position:relative; top:-0.75px; line-height:24px;}
+.questionBox td {margin:0px !important; padding:0px;}
+.questionInput {width:20px;}
+.questionBox label {padding:0px !important; margin:0px !important; line-height:24px;}    
+
+
+.questionBox tr:hover {background-color:#fbfbfb !important;} 
   
+</style></head>
+<body id="screenBody" onload="parent.onFrameLoad();">    
+<h1 class="blueFadeShort">Question 2</h1>
+<div class="notebookWide width90">
+   <h2>Generally Asbestos-related diseases can take up to?
+</h2>
+    
+<div class="questionBox width75">
+    <table>
+    <tbody>
+        <tr>
+            <td class="questionInput"><input value="on" rel="incorrect" id="answer1" class="answer" title="Click if this is true." name="a" type="radio" /></td> 
+            <td class="questionLabel"><label for="answer1">5 &ndash; 10 years to develop</label></td>
+        </tr>
+        <tr><td class="questionInput"><input value="on" rel="correct" id="answer2" class="answer" title="Click if this is true." name="a" type="radio" /></td> <td class="questionLabel"><label for="answer2"> 15 &ndash; 60 years to develop</label></td></tr>
+         <tr><td class="questionInput"><input value="on" rel="incorrect" id="answer3" class="answer" title="Click if this is true." name="a" type="radio" /></td> <td class="questionLabel"><label for="answer3">15 &ndash; 20 years to develop</label></td></tr>
+          <tr><td class="questionInput"><input value="on" rel="incorrect" id="answer4" class="answer" title="Click if this is true." name="a" type="radio" /></td> <td class="questionLabel"><label for="answer4">15 &ndash; 40 years to develop</label></td></tr>
+        
+    </tbody></table></div>
+</div>
+<div style="left: 50px; top: 240px; position: absolute; width: 310px" class="whiteboxFeedback"><div id="correct" class="final_result"><div class="hotspotMinorCloseWindow" title="Close">close<span></span></div><span>Correct.</span> <br /> Please continue.</div><div id="incorrect" class="final_result"><div class="hotspotMinorCloseWindow" title="Close">close<span></span></div><span>Incorrect.</span>  Please go back through Module 1 to locate the correct answer.</div></div>
+<img src="../../../media/question.jpg" title="A question mark" alt="A question mark" class="notDisplay" id="bg" height="390" width="675" />
+<script type="text/javascript">
 
-   function countdown( elementName, minutes, seconds )
-{
-    var element, endTime, hours, mins, msLeft, time;
+    if (parent.$) {
 
-    function twoDigits( n )
-    {
-        return (n <= 9 ? "0" + n : n);
-    }
+   
+       var activity = 1;
+        var frame = parent.$("#myFrame").contents();
+        //fix
+        parent.$(".answer", frame).lessonQuestions();
+        //parent.$(".answer", frame).lessonQuestions({});
+        parent.$(".hotspotsMinor a", frame).hotspotMinor();
+        var background = parent.$('#bg',frame).attr('src');
+        parent.$("body", frame).css('background', '#fff url('+background+') no-repeat  center 90%');
 
-    function updateTimer()
-    {
-        msLeft = endTime - (+new Date);
-        if ( msLeft < 1000 ) {
-            element.innerHTML = "Please click forward ";
-            parent.enable(true); 
-        } else {
-            time = new Date( msLeft );
-            hours = time.getUTCHours();
-            mins = time.getUTCMinutes();
-            element.innerHTML = (hours ? hours + ':' + twoDigits( mins ) : mins) + ':' + twoDigits( time.getUTCSeconds() );
-            setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
-        }
-    }
-
-    element = document.getElementById( elementName );
-    endTime = (+new Date) + 1000 * (60*minutes + seconds) + 500;
-    updateTimer();
-}
-
-countdown( "countdown", 1, 01 );
-
-
-}); 
-
-	
-
-}
-// ]]></script></body>
+        
+}</script> </body>
 </html>
