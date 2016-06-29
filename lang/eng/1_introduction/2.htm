@@ -49,7 +49,7 @@ var frame = parent.$("#myFrame").contents();
 parent.$(".hotspotsMinor a", frame).hotspotMinor();    
     parent.$('.introFx', frame).introFx({
         'afterFx': function() {
-            parent.$(".answer", frame).lessonQuestions({'answersCount':'3', 'type': 'modal'});
+            parent.$(".answer", frame).questions({'answersCount':'3', 'type': 'modal'});
         }
     });
 }
